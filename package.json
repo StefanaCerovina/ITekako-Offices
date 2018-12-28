@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "google-maps-react": "^2.0.2",
+    "prettier": "^1.15.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
