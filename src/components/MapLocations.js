@@ -86,17 +86,15 @@ class MapLocations extends React.Component {
 				style={{width: '86vw', height: '100vh'}}
 			>
 				{this.renderList()}
-				{ (this.state.activeMarker && this.state.showingInfoWindow) && 
-					<InfoWindow 
-		        		marker={this.state.activeMarker}
-		        		visible={this.state.showingInfoWindow}
-		        	>
-		        		<div>
-		        			<h4>{this.state.activeMarker.name}</h4>
-		        			<p>{this.state.activeMarker.description}</p>
-		        		</div>
-		        	</InfoWindow>
-	        	}
+				<InfoWindow 
+		        	marker={this.state.activeMarker}
+		        	visible={this.state.showingInfoWindow}
+		        >
+		        	<div>
+		        		<h4>{this.state.activeMarker ? this.state.activeMarker.name : ''}</h4>
+		        		<p>{this.state.activeMarker ? this.state.activeMarker.description: ''}</p>
+		        	</div>
+		        </InfoWindow>
 			</Map>
 		);
 	}
